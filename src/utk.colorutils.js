@@ -17,6 +17,7 @@ Utk.ColorUtils = (function () {
             blue) {
             return red + red + green + green + blue + blue;
         });
+
         var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
             hex);
         return result ? {
@@ -46,6 +47,14 @@ Utk.ColorUtils = (function () {
         return self.rgbToHex(red, green, blue);
     };
 
-    return self;
+    self.averageWith = function (color, base) {
+        _color = self.hexToRgb(color);
+        _base = self.hexToRgb(base);
+        var red = Math.floor((_color.red + _base.red) / 2);
+        var green = Math.floor((_color.green + _base.green) / 2);
+        var blue = Math.floor((_color.blue + _base.blue) / 2);
+        return self.rgbToHex(red, green, blue);
+    };
 
+    return self;
 }());
