@@ -29,4 +29,16 @@ Utk.ArrayUtils = (function () {
         return res;
     };
 
+    /**
+     * removes element from array in place
+     * @param  {Array} array   Array to remove element from
+     * @param  {object} element element to remove from array
+     */
+    self.removeElement = function (array, element) {
+        var index = array.indexOf(element);
+        if (index > -1) {
+            array.splice(index, 1);
+        }
+    };
+
 });
