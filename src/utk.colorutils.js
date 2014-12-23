@@ -56,5 +56,28 @@ Utk.ColorUtils = (function () {
         return self.rgbToHex(red, green, blue);
     };
 
+    self.valueToColor = function (value) {
+        var a = value / 100;
+        a = (a < 0) ? 0 : ((a > 1) ? 1 : a);
+        var h0 = 120;
+        var h1 = 0;
+        var h = (h0) * (1 - a) + (h1) * (a);
+        console.log(h);
+
+        var r = Math.sin(((120-h)*90/120) * Math.PI/ 180) * 1;
+        var g = Math.sin((h*90/120)* Math.PI/ 180) * 1;
+        var b = 0;// Math.sin(h + 240) * 1;
+        console.log(r, g, b);
+        var avg = (r + g + b) / 3;
+        red = ((r - avg) * 1) + avg;
+        green = ((g - avg) * 1) + avg;
+        blue = ((b - avg) * 1) + avg;
+        return {
+            red: red * 255,
+            green: green * 255,
+            blue: blue * 255
+        };
+    };
+
     return self;
 }());
