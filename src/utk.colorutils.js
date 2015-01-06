@@ -62,16 +62,19 @@ Utk.ColorUtils = (function () {
         var h0 = 120;
         var h1 = 0;
         var h = (h0) * (1 - a) + (h1) * (a);
-        console.log(h);
-
-        var r = Math.sin(((120-h)*90/120) * Math.PI/ 180) * 1;
-        var g = Math.sin((h*90/120)* Math.PI/ 180) * 1;
-        var b = 0;// Math.sin(h + 240) * 1;
-        console.log(r, g, b);
+        var h2 = h * 3 / 4;
+        var k2r = Math.PI / 180;
+        var r = (h <= 120) ? Math.sin((h2 + 90) * k2r) :
+            ((h >= 240) ? Math.sin((h2 - 180) * k2r) : 0);
+        var g = (h <= 240) ? Math.sin(h2 * k2r) : 0;
+        var b = (h >= 120) ? Math.sin((h2 - 90) * k2r) : 0;
         var avg = (r + g + b) / 3;
         red = ((r - avg) * 1) + avg;
         green = ((g - avg) * 1) + avg;
         blue = ((b - avg) * 1) + avg;
+        red = Math.round(red);
+        green = Math.round(green);
+        blue = Math.round(blue);
         return {
             red: red * 255,
             green: green * 255,
