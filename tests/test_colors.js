@@ -29,7 +29,7 @@ describe('Colors utils', function () {
         expect(val.green).toEqual(255);
         expect(val.blue).toEqual(0);
     });
-    it('hexToRgb returns proprer color', function() {
+    it('hexToRgb returns proprer color', function () {
         var val = Utk.ColorUtils.hexToRgb('#0f0');
         expect(val.red).toEqual(0);
         expect(val.green).toEqual(255);
@@ -39,4 +39,9 @@ describe('Colors utils', function () {
         expect(val.green).toEqual(255);
         expect(val.blue).toEqual(0);
     });
+    it('averageWith returns average color for red (#f00) and white (#fff)',
+        function () {
+            var val = Utk.ColorUtils.averageWith('#f00', '#fff');
+            expect(val).toEqual('#ff7f7f');
+        });
 });
