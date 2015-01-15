@@ -1,0 +1,34 @@
+{
+  "name": "Utk.js",
+  "version": "0.1.0",
+  "description": "Helper functions",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gulp": "^3.8.10"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jasmine": "^2.0.0",
+    "jsdom": "^2.0.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utek/Utk.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "colors",
+    "arrays"
+  ],
+  "author": "Łukasz Bołdys",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/utek/Utk.js/issues"
+  },
+  "homepage": "https://github.com/utek/Utk.js"
+}
