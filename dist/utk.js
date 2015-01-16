@@ -3,7 +3,7 @@ var Utk = (function (self) {
     return self;
 }(Utk || {}));
 
-Utk.ArrayUtils = function () {
+Utk.ArrayUtils = (function () {
     'use strict';
     var self = {};
 
@@ -26,9 +26,6 @@ Utk.ArrayUtils = function () {
             if (valA !== undefined) {
                 res.push(valA);
             }
-            if (valB !== undefined) {
-                res.push(valB);
-            }
         }
         return res;
     };
@@ -44,7 +41,8 @@ Utk.ArrayUtils = function () {
             array.splice(index, 1);
         }
     };
-};
+    return self;
+}());
 
 var Utk = (function (self) {
     'use strict';
