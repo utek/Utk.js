@@ -24,10 +24,10 @@ describe('Arrays utils', function () {
         expect(srcArray).toEqual(resArray);
     });
 
-    it('combine arrays leaving unique elements', function () {
+    it('removes elements in one from other array', function () {
         var a = [1, 2, 3, 4, 5, 6];
         var b = [3, 4, 5, 6, 7, 8, 9, 0, 'a'];
-        var want = [1, 2, 7, 8, 9, 0, 'a'];
+        var want = [1, 2];
         var res = Utk.ArrayUtils.diffArray(a, b);
         expect(want).toEqual(res);
     });

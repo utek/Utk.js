@@ -26,9 +26,6 @@ Utk.ArrayUtils = (function () {
             if (valA !== undefined) {
                 res.push(valA);
             }
-            if (valB !== undefined) {
-                res.push(valB);
-            }
         }
         return res;
     };

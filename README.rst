@@ -17,5 +17,7 @@ Utk.ColorUtils.hexToRgb(hex) - returns color provided as hex string (ie: #fff or
 Utk.ColorUtils.hexToRgb(red, green, blue) - returns color in hex string
 
 
+Utk.ArrayUtils
+~~~~~~~~~~~~~~~~~~~~
 
 
